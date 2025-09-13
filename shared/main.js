@@ -13,4 +13,6 @@ window.addEventListener('hashchange', (e) => {
     React.render(PageComponent, document.getElementById("root"));
 });
 
-React.render(MainPage, document.getElementById("root"));
+const PageComponent = routing[location.hash];
+
+React.render(PageComponent ?? MainPage, document.getElementById("root"));
