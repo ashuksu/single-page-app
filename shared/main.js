@@ -14,8 +14,11 @@ allLinks.forEach((el) => {
     el.addEventListener('click', (e) => {
         e.preventDefault();
         history.pushState({}, '', el.href);
-        render();
     });
+});
+
+navigation.addEventListener('currententrychange', () => {
+    render();
 });
 
 const render = () => {
