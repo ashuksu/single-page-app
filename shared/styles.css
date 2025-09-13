@@ -34,7 +34,11 @@ header {
     color: #fff;
     font-size: 24px;
     text-decoration: none;
+    padding: 0.3rem 0.6rem;
     border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo:hover {
@@ -60,10 +64,9 @@ nav a:hover {
 }
 
 .counter {
-    background: rgba(0, 123, 255, 0.35);
+    border: 1px solid rgba(255, 165, 0, 0.5);
     color: #fff;
-    border: none;
-    padding: 1rem 2rem;
+        padding: 1rem 2rem;
     font-size: 1.6rem;
     cursor: pointer;
     display: flex;
@@ -81,6 +84,13 @@ nav a:hover {
     font-weight: 800;
     border-radius: var(--border-radius);
     color: #333;
+    cursor: pointer;
+    background: #c13900;
+}
+
+.counter button:hover {
+    background: #c1552f;
+    transition: background .15s;
 }
 
 main {
