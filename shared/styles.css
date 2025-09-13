@@ -39,6 +39,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .logo:hover {
@@ -52,13 +53,14 @@ nav {
     gap: 2rem;
 }
 
-nav a {
+nav span {
     color: #959595;
     text-decoration: none;
     font-size: 2rem;
+    cursor: pointer;
 }
 
-nav a:hover {
+nav span:hover {
     color: #fff;
     transition: color .15s;
 }
@@ -68,7 +70,6 @@ nav a:hover {
     color: #fff;
         padding: 1rem 2rem;
     font-size: 1.6rem;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,6 +84,7 @@ nav a:hover {
     font-size: 1.8rem;
     font-weight: 800;
     border-radius: var(--border-radius);
+    cursor: pointer;
     color: #333;
     cursor: pointer;
     background: #c13900;
