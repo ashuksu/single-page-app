@@ -47,20 +47,20 @@ header {
     transition: border-color .15s;
 }
 
-nav {
+.nav {
     display: flex;
     align-items: center;
     gap: 2rem;
 }
 
-nav span {
+.nav__link {
     color: #959595;
     text-decoration: none;
     font-size: 2rem;
     cursor: pointer;
 }
 
-nav span:hover {
+.nav__link:hover {
     color: #fff;
     transition: color .15s;
 }
