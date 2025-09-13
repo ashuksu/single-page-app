@@ -4,15 +4,23 @@ import {BackendPage} from "../pages/backend-component.js";
 import React from "./react.js";
 
 const routing = {
-    '#main': MainPage,
-    '#frontend': FrontendPage,
-    '#backend': BackendPage
+    '/main': MainPage,
+    '/frontend': FrontendPage,
+    '/backend': BackendPage
 }
-window.addEventListener('hashchange', (e) => {
-    const PageComponent = routing[location.hash];
-    React.render(PageComponent, document.getElementById("root"));
+
+const allLinks = document.querySelectorAll('a')
+allLinks.forEach((el) => {
+    el.addEventListener('click', (e) => {
+        e.preventDefault();
+        history.pushState({}, '', el.href);
+        render();
+    });
 });
 
-const PageComponent = routing[location.hash];
+const render = () => {
+    const PageComponent = routing[window.location.pathname];
+    React.render(PageComponent, document.getElementById("root"));
+}
 
-React.render(PageComponent ?? MainPage, document.getElementById("root"));
+render();
